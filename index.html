@@ -7,7 +7,7 @@
     <title>Frontend Mentor | E-commerce product page</title>
     <link type="icon/image" rel="icon" href="./images/favicon-32x32.png">
     <link type="text/css" rel="stylesheet" href="./style.css">
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 <body>
     <div id="container">
@@ -26,7 +26,26 @@
             </div>
             <div id="rightHeader">
                 <div id="cart">
-                    <img src="./images/icon-cart.svg" alt="cart">
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                    <div id="cartNotification"></div>
+
+                    <div id="hiddenCartCashier">
+                        <h4>Cart</h4>
+                        <div id="contentAdd">
+                            <img src="./images/image-product-1-thumbnail.jpg" alt="picture">
+                            <div>
+                                <p>Fall Limited Edition Sneakers</p>
+                                <p id="vezesAPagar">$125.00 x 3 <small>$375.00</small></p>
+                            </div>
+                            <span id="del" class="material-symbols-outlined">delete</span>
+                        </div>
+                        <div id=checkout>
+                            <button>Checkout</button>
+                        </div >
+                    </div>
+
+
+
                 </div>
                 <div id="profile">
                     <img src="./images/image-avatar.png" alt="perfil">
@@ -53,19 +72,21 @@
                 <div id="value">
                     <div id="price">
                         <h3>$125.00</h3>
-                        <span>$250.00</span>
+                        <div id="discount">50 %</div>
                     </div>
-                    <div id="discount">50 %</div>
+                    <span>$250.00</span>
                 </div>
                 <div id="addToCart">
                     <div id="theAmount">
-                        <p>-</p>
-                        <p>0</p>
-                        <p>+</p>
+                        <p id="down">-</p>
+                        <input type="number" nome="number" value="0" id="number" placeholder="1">
+                        <!-- <p id="amount">0</p> -->
+                        <p id="up">+</p>
                     </div>
-                    <button>
-                        <img src="./images/icon-cart.svg" alt="cart">
+                    <button id="adiciona">
+                        <span  class="material-symbols-outlined">add_shopping_cart</span>
                         <p>Add to cart</p>
+
                     </button>
                 </div>
 
@@ -78,6 +99,7 @@
 
 
 
+    <script src="https://kit.fontawesome.com/969b03bb93.js" crossorigin="anonymous"></script>
     <script src="./script.js"></script>
 </body>
 </html>
