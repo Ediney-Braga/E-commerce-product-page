@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    display: flex;
+    justify-content: center;
+}
+#container{
+    border: 1px solid red;
+    width: 1100px;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    border-bottom: 1px solid gray;
+}
+
+#leftHeader, #rightHeader{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+nav a{
+    color: gray;
+    margin-right: 30px;
+}
+
+#rightHeader #profile img{
+    width: 50px;
+}
+
+main{
+    display: flex;
+    margin-top: 90px;
+}
+
+#pictures{
+    border: 1px solid blue;
+
+}
+
+
+
+#selectedPicture img{
+    width: 450px;
+    border-radius: 20px;
+}
+
+#amostraPictures {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+#amostraPictures img{
+    width: 90px;
+    border-radius: 10px;   
+}
