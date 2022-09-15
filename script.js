@@ -16,12 +16,18 @@ cart.addEventListener("click", () => {
 
 // calcula a quantia a ser paga de acordo com a quantidade de itens adicionados ao carrinho ---- e ---- mostra uma notificação de itens add ao carrinho.
 const addToCart = document.querySelector("#adiciona");
-addToCart.addEventListener("click", addNotivication)
+addToCart.addEventListener("click", addItensToCart)
+
+function addItensToCart () {
+    newItem.style.display = "block";
+    cartEmpty.style.display = "none";
+    addNotivication();
+}
 
 function addNotivication(){
     let aPagar = (125.00 * amount.value).toFixed(2);
     let vezesAPagar = document.querySelector("#vezesAPagar");
-    vezesAPagar.innerHTML = `<p id="vezesAPagar">$125.00 x ${amount.value}<small>$${aPagar}</small></p>`
+    vezesAPagar.innerHTML = `<p id="vezesAPagar">$125.00 x ${amount.value} <small> $${aPagar}</small></p>`
 
     let cartNotification = document.querySelector("#cartNotification");
 
@@ -32,7 +38,19 @@ function addNotivication(){
     }
     cartNotification.innerHTML =`<p>${amount.value}</p>`
 }
+
+    const del = document.querySelector(".del");
+    const newItem = document.querySelector(".newItem");
+    const cartEmpty = document.querySelector(".cartEmpty");
+
 //-----------------------------------------------
+
+// ----function remove itens do carrinho---
+
+del.addEventListener("click", ()=>{
+    newItem.style.display = "none";
+    cartEmpty.style.display = "flex";
+})
 
 // modifica a quantidade do produto a ser adcionada ao carrinho
 const up = document.querySelector("#up");
@@ -51,17 +69,6 @@ function mostrarAmount (element) {
         amount.value -= 1 ;
     }
 }
-
-
-
-// ------------  FUNÇÃO DELETE AINDA NÃO ESTA FUNCINAL----------
-// let del = document.querySelector("#del");
-
-// del.addEventListener("click", () => {
-//     let cartNotification = document.querySelector("#cartNotification");
-//     hiddenCart.innerHTML = "<h4>Cart</h4> <div id='contentAdd'><img src=''alt=''><div><p></p><p id='vezesAPagar'><small></small></p> </div><span id='del' class='material-symbols-outlined'>delete</span></div><div id=checkout></div >";
-//     cartNotification.style.display = "none"
-// })
 
 
 // --------------- VIEW FULL SCREEN PICTURE --------------------

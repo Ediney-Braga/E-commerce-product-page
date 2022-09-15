@@ -31,17 +31,24 @@
 
                     <div id="hiddenCartCashier">
                         <h4>Cart</h4>
-                        <div id="contentAdd">
-                            <img src="./images/image-product-1-thumbnail.jpg" alt="picture">
-                            <div>
-                                <p>Fall Limited Edition Sneakers</p>
-                                <p id="vezesAPagar">$125.00 x 3 <small>$375.00</small></p>
+                        <div class="newItem">
+                            <div id="itensAdd">
+                                <div class="contentItemAdd">
+                                    <img src="./images/image-product-1-thumbnail.jpg" alt="picture">
+                                    <div>
+                                        <p>Fall Limited Edition Sneakers</p>
+                                        <p id="vezesAPagar">$125.00 x 3 <small>$375.00</small></p>
+                                    </div>
+                                </div>
+                                <span class="material-symbols-outlined del">delete</span>
                             </div>
-                            <span id="del" class="material-symbols-outlined">delete</span>
+                            <div id=checkout>
+                                <button>Checkout</button>
+                            </div >
                         </div>
-                        <div id=checkout>
-                            <button>Checkout</button>
-                        </div >
+                        <div class='cartEmpty'>
+                            <p>Your Cart is empty</p>
+                        </div>
                     </div>
 
 
@@ -86,7 +93,6 @@
                     <div id="theAmount">
                         <p id="down">-</p>
                         <input type="number" nome="number" value="0" id="number" placeholder="1">
-                        <!-- <p id="amount">0</p> -->
                         <p id="up">+</p>
                     </div>
                     <button id="adiciona">

@@ -64,17 +64,17 @@ nav a:hover{
     display: none;
 }
 
-/* ------------------------------------ */
 .opacity{
     opacity: .3;
 }
+/* ------------------------------------ */
 
 #hiddenCartCashier{
     box-sizing: border-box;
     background-color: #fff;
     width: 350px;
     position: absolute;
-    left: -200px;
+    left: -300px;
     border-radius: 10px;
     top: 50px;
     box-shadow: 7px 7px 13px 0px rgba(0, 0, 0, 0.313);
@@ -82,27 +82,38 @@ nav a:hover{
     transition: all .3s ease-in;
 }
 
+.newItem{
+    display: none;
+}
+
 h4{
     border-bottom: 1px solid hsl(215, 7%, 65%);
     padding:20px;
 }
-#contentAdd{
+
+#itensAdd{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
-    box-sizing: border-box;
+    margin: 20px 20px 0px 20px;
+    color: #555659;
 }
 
-#contentAdd img{
-    height: 50px;
-    border-radius: 5px;
+.contentItemAdd{
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-#contentAdd small{
+.contentItemAdd img{
+    width: 50px;
+    border-radius:5px ;
+}
+
+.contentItemAdd small{
     font-weight: 700;
+    color: black;
     font-size: 16px;
-    margin-left: 10px;
 }
 
 #checkout{
@@ -113,6 +124,22 @@ h4{
     width: 100%;
     box-shadow: none;
 }
+
+.cartEmpty{
+    display: flex;
+    align-items: center;
+    height: 200px;
+    justify-content: center;
+}
+
+.cartEmpty p{
+    font-weight: 700;
+    color:#555659;
+}
+
+
+
+
 #profile img{
     width: 50px;
     border-radius:50%;
